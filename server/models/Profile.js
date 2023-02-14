@@ -9,9 +9,7 @@ const profileSchema = new Schema({
   },
   profilePicture: {
     type: Image,
-    required: true,
-    unique: true,
-    trim: true,
+    
   },
   skills: [
     {
