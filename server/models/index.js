@@ -1,4 +1,4 @@
 const User = require('./User');
-//others here//
+const Profile = require
 
-module.exports = //{User, //others here };
+module.exports = {User, Profile}
