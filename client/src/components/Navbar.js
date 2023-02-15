@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Stack } from '@mui/material'
 
-import Logo from '../assets/images/Logo.png';
+import Logo from '../assets/images/dumbbell.png';
 import { borderBottom } from '@mui/system';
 
 const Navbar = () => {
@@ -23,8 +23,15 @@ const Navbar = () => {
                 <Link to="/" style={{ textDecoration: 'none', color: '#3A1212', 
                 borderBottom: '3px solid #99D98C'}}
                 >Home</Link>
-                <a href="#exercises" style={
-                    {textDecoration: 'none', color: '#3A1212'}}>Exercises</a>
+                <Link to="/" style={{ textDecoration: 'none', color: '#3A1212', 
+                borderBottom: '3px solid #99D98C'}}
+                >Exercises</Link>
+                <Link to="/login" style={{ textDecoration: 'none', color: '#3A1212', 
+                borderBottom: '3px solid #99D98C'}}
+                >Login</Link>
+                <Link to="/profile" style={{ textDecoration: 'none', color: '#3A1212', 
+                borderBottom: '3px solid #99D98C'}}
+                >Profile</Link>
                 
             </Stack>
         </Stack>
