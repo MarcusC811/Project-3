@@ -1,12 +1,12 @@
 const { Schema, model } = require('mongoose');
 
 const profileSchema = new Schema({
-  firstName: {
+  first_name: {
     type: String,
   
     default: null,
   },
-  lastName: {
+  last_name: {
     type: String,
 
     default: null,
