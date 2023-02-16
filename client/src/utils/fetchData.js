@@ -11,3 +11,17 @@ export const fetchWorkoutData = async (query) => {
       const workoutData = await response.json()
       return workoutData;
 };
+
+export const getRandomWorkouts = (arr, num) => {
+  let shuffled = arr.slice(0);
+  let i = arr.length;
+  let min = i - num;
+  
+  while (i-- > min) {
+    let index = Math.floor((i + 1) * Math.random());
+    let temp = shuffled[index];
+    shuffled[index] = shuffled[i];
+    shuffled[i] = temp;
+  }
+  return shuffled.slice(min);
+}
