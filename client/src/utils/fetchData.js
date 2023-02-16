@@ -1,20 +1,27 @@
-export const exerciseOptions = {
+export const fetchWorkoutData = async (query) => {
+  const options = {
     method: 'GET',
-  url: 'https://exercisedb.p.rapidapi.com/exercises/bodyPartList',
-  headers: {
-    'X-RapidAPI-Key': '6f2837fd3dmsh95fabaf633f198dp1705b7jsn6a2e2c4fce39',
-    'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
-  }
+    headers: {
+        'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
+        'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
+    }
+  };
+
+  const response = await fetch('https://exercisedb.p.rapidapi.com/exercises', options)
+      const workoutData = await response.json()
+      return workoutData;
 };
-    
 
-
-
-
-
-export const fetchData = async (url, options) => {
-    const response = await fetch(url, options);
-    const data = response.json();
-
-    return data;
+export const getRandomWorkouts = (arr, num) => {
+  let shuffled = arr.slice(0);
+  let i = arr.length;
+  let min = i - num;
+  
+  while (i-- > min) {
+    let index = Math.floor((i + 1) * Math.random());
+    let temp = shuffled[index];
+    shuffled[index] = shuffled[i];
+    shuffled[i] = temp;
+  }
+  return shuffled.slice(min);
 }

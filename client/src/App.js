@@ -5,7 +5,7 @@ import React from 'react';
 import { Box } from '@mui/material';
 
 import './App.css';
-// import ExerciseDetail from './pages/ExerciseDetail';
+import ExerciseDetail from './pages/ExerciseDetail';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import Login from './pages/Login';
@@ -73,7 +73,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
-        {/* <Route path="/exercise/:id" element={<ExerciseDetail />} /> */}
+        <Route path="/exercise" element={<ExerciseDetail />} />
       </Routes>
     </Box>
     </ApolloProvider>
