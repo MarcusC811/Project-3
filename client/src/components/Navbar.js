@@ -4,6 +4,7 @@ import { Stack } from '@mui/material'
 
 import Logo from '../assets/images/dumbbell.png';
 import { borderBottom } from '@mui/system';
+import webFont from 'webfontloader';
 
 const Navbar = () => {
     return (
@@ -20,8 +21,8 @@ const Navbar = () => {
             gap="40px"
             fontSize="24px"
             alignItems="flex-end" >
-                <Link to="/" style={{ textDecoration: 'none', color: '#3A1212', 
-                borderBottom: '3px solid #99D98C'}}
+                <Link to="/" style={{ textDecoration: 'none', color: '#3A1212',
+                borderBottom: '3px solid #99D98C', fontFamily: 'Droid Sans'}}
                 >Home</Link>
                 <Link to="/" style={{ textDecoration: 'none', color: '#3A1212', 
                 borderBottom: '3px solid #99D98C'}}

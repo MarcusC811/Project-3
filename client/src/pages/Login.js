@@ -13,6 +13,7 @@ import { Box } from '@mui/material';
 // import Link from '@mui/joy/Link';
 import BackgroundImage from '../assets/images/banner.png';
 import ReactDOM from 'react-dom/client';
+import Signup from './Signup';
 
 import Auth from '../utils/auth';
 
@@ -140,13 +141,15 @@ const Login = (props) => {
               </Typography>
               <Typography level="body2">Sign in to continue.</Typography>
             </div>
-            <FormControl>
+            <FormControl onSubmit={handleFormSubmit}>
               <FormLabel>Email</FormLabel>
               <Input
                 // html input attribute
                 name="email"
                 type="email"
                 placeholder="johndoe@email.com"
+                value={formState.email}
+                onChange={handleChange}
               />
             </FormControl>
             <FormControl>
@@ -156,12 +159,14 @@ const Login = (props) => {
                 name="password"
                 type="password"
                 placeholder="password"
+                value={formState.password}
+                onChange={handleChange}
               />
             </FormControl>
   
             <Button sx={{ mt: 1 /* margin top */ }}>Log in</Button>
             <Typography
-              endDecorator={<Link href="/sign-up">Sign up</Link>}
+              endDecorator={<Link href="/signup">Sign up</Link>}
               fontSize="sm"
               sx={{ alignSelf: 'center' }}
             >

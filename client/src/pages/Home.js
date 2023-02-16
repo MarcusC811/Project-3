@@ -4,6 +4,9 @@ import { Box } from '@mui/material';
 import HeroBanner from "../components/HeroBanner";
 import SearchExercises from "../components/SearchExercises";
 import Exercises from "../components/Exercises";
+import Shiny from "../assets/images/shinydb.png";
+import HorizontalScrollBar from "../components/HorizontalScrollBar";
+
 
 const Home = () => {
     const [bodyPart, setBodyPart] = useState('all');
@@ -20,6 +23,17 @@ const Home = () => {
             bodyPart={bodyPart}
             setBodyPart={setBodyPart}
              />
+             <div
+            
+             >
+            {/* <img src={Shiny} alt="shiny-dumbbell"
+            className="shiny-dumbbell-img" 
+            sx={{
+
+            }} */}
+        
+        </div>
+        
         </Box>
     )
 }
