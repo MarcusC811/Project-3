@@ -14,7 +14,7 @@ const Home = () => {
     return (
         <Box>
             <HeroBanner/>
-            <SearchExercises setExercises={setExercises}
+            {/* <SearchExercises setExercises={setExercises}
             bodyPart={bodyPart}
             setBodyPart={setBodyPart}
             />
@@ -22,18 +22,7 @@ const Home = () => {
             setExercises={setExercises}
             bodyPart={bodyPart}
             setBodyPart={setBodyPart}
-             />
-             <div
-            
-             >
-            {/* <img src={Shiny} alt="shiny-dumbbell"
-            className="shiny-dumbbell-img" 
-            sx={{
-
-            }} */}
-        
-        </div>
-        
+             /> */}
         </Box>
     )
 }
