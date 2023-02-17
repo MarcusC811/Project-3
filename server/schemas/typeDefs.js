@@ -19,7 +19,6 @@ type User {
     profile(username: String): [Profile]
   }
 
-
 type Profile {
     _id: ID
     first_name: String
