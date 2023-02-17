@@ -10,6 +10,7 @@ import FormLabel from '@mui/joy/FormLabel';
 import Input from '@mui/joy/Input';
 import Button from '@mui/joy/Button';
 import { Box } from '@mui/material';
+import { Navigate } from "react-router-dom";
 
 import BackgroundImage from '../assets/images/banner.png';
 
@@ -35,6 +36,7 @@ const Signup = () => {
   };
 
   const handleFormSubmit = async (event) => {
+
     event.preventDefault();
     console.log(formState);
 
@@ -44,10 +46,13 @@ const Signup = () => {
       });
 
       Auth.login(data.addUser.token);
+        setFormState('')
     } catch (e) {
       console.error(e);
     }
   };
+if (Auth.loggedIn()) {
+    return <Navigate to="/profile" replace={true}/>}
 
   return (
     // <main className="flex-row justify-center mb-4">
@@ -139,12 +144,16 @@ const Signup = () => {
             variant="outlined"
           >
             <div>
+                
+                    
+                
               <Typography level="h4" component="h1">
                 <b>Welcome!</b>
               </Typography>
               <Typography level="body2">Register with us</Typography>
             </div>
-            <FormControl onSubmit={handleFormSubmit}>
+            <form onSubmit={handleFormSubmit}>
+            <FormControl>
             <FormLabel>Username</FormLabel>
               <Input
                 // html input attribute
@@ -154,7 +163,10 @@ const Signup = () => {
                 value={formState.username}
                 onChange={handleChange}
               />
+              </FormControl>
+              <FormControl>
               <FormLabel>Email</FormLabel>
+              
               <Input
                 // html input attribute
                 name="email"
@@ -176,7 +188,10 @@ const Signup = () => {
               />
             </FormControl>
   
-            <Button sx={{ mt: 1 /* margin top */ }}>Log in</Button>
+            <Button type="submit"
+            sx={{ mt: 1 /* margin top */ }}>Sign up
+            </Button>
+            </form>
             {/* <Typography
               endDecorator={<Link href="/sign-up">Sign up</Link>}
               fontSize="sm"
@@ -189,7 +204,7 @@ const Signup = () => {
         </main>
       </CssVarsProvider>
       </div>
-
+        
   );
 };
 
