@@ -7,7 +7,7 @@ export const fetchWorkoutData = async (query) => {
     }
   };
 
-  const response = await fetch('https://exercisedb.p.rapidapi.com/exercises', options)
+  const response = await fetch(`https://exercisedb.p.rapidapi.com/exercises/target/${query}`, options)
       const workoutData = await response.json()
       return workoutData;
 };

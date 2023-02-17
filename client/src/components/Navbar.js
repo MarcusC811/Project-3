@@ -35,12 +35,12 @@ const Navbar = () => {
                         Exercises
                     </Button>
                     <Menu {...bindMenu(popupState)}>
-                        <MenuItem onClick={popupState.close}>Abductors</MenuItem>
-                        <MenuItem onClick={popupState.close}>Abs</MenuItem>
-                        <MenuItem onClick={popupState.close}>Biceps</MenuItem>
-                        <MenuItem onClick={popupState.close}>Calves</MenuItem>
-                        <MenuItem onClick={popupState.close}>Cardiovascular System</MenuItem>
-                        <MenuItem onClick={popupState.close}>Delts</MenuItem>
+                        <Link to="/exercise/abductors"><MenuItem onClick={popupState.close}>Abductors</MenuItem></Link>
+                        <Link to="/exercise/abs"><MenuItem onClick={popupState.close}>Abs</MenuItem></Link>
+                        <Link to="/exercise/biceps"><MenuItem onClick={popupState.close}>Biceps</MenuItem></Link>
+                        <Link to="/exercise/calves"><MenuItem onClick={popupState.close}>Calves</MenuItem></Link>
+                        <Link to="/exercise/cardiovascular%20system"><MenuItem onClick={popupState.close}>Cardiovascular System</MenuItem></Link>
+                        <Link to="/exercise/delts"><MenuItem onClick={popupState.close}>Delts</MenuItem></Link>
                     </Menu>
                     </React.Fragment>
                 )}
