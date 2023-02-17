@@ -9,10 +9,11 @@ import FormControl from '@mui/joy/FormControl';
 import FormLabel from '@mui/joy/FormLabel';
 import Input from '@mui/joy/Input';
 import Button from '@mui/joy/Button';
-import { Box } from '@mui/material';
-// import Link from '@mui/joy/Link';
-import BackgroundImage from '../assets/images/banner.png';
-import ReactDOM from 'react-dom/client';
+import { Box, Stack } from '@mui/material';
+import BackgroundImage from '../assets/images/SWOLEMATE2.png';
+import { Navigate } from 'react-router-dom';
+
+
 
 import Auth from '../utils/auth';
 
@@ -37,19 +38,25 @@ const Login = (props) => {
     try {
       const { data } = await login({
         variables: { ...formState },
+    
       });
 
       Auth.login(data.login.token);
+      setFormState('')
     } catch (e) {
       console.error(e);
     }
 
     // clear form values
-    setFormState({
-      email: '',
-      password: '',
-    });
+    // setFormState({
+    //   email: '',
+    //   password: '',
+    // });
   };
+  if (Auth.loggedIn()) {
+    return <Navigate to="/profile"  replace={true} />;
+  }
+  
 
 //   return (
 //     <main className="flex-row justify-center mb-4">
@@ -102,12 +109,14 @@ const Login = (props) => {
 //   );
 
 
+
+
     return (
     <div
     >
       <CssVarsProvider>
         <main>
-            <Box
+            <Stack
             sx={{
                 backgroundImage: `url(${BackgroundImage})`,
                 height: 1000
@@ -120,7 +129,7 @@ const Login = (props) => {
               width: 300,
               height: 300,
               mx: 'auto', // margin left & right
-              my: 4, // margin top & botom
+              mt: 20,
               py: 3, // padding top & bottom
               px: 2, // padding left & right
               display: 'flex',
@@ -130,16 +139,19 @@ const Login = (props) => {
               borderRadius: '22px',
               boxShadow: 'md',
               backgroundColor: '#99D98C',
-              opacity: '70%'
+              opacity: '100%',
             }}
             variant="outlined"
           >
+         
             <div>
+                
               <Typography level="h4" component="h1">
                 <b>Welcome!</b>
               </Typography>
               <Typography level="body2">Sign in to continue.</Typography>
             </div>
+            <form onSubmit={handleFormSubmit}>
             <FormControl>
               <FormLabel>Email</FormLabel>
               <Input
@@ -147,31 +159,43 @@ const Login = (props) => {
                 name="email"
                 type="email"
                 placeholder="johndoe@email.com"
+                value={formState.email}
+                onChange={handleChange}
               />
             </FormControl>
-            <FormControl>
+            <FormControl onSubmit={handleFormSubmit}>
               <FormLabel>Password</FormLabel>
               <Input
                 // html input attribute
                 name="password"
                 type="password"
                 placeholder="password"
+                value={formState.password}
+                onChange={handleChange}
               />
             </FormControl>
+
   
-            <Button sx={{ mt: 1 /* margin top */ }}>Log in</Button>
-            <Typography
-              endDecorator={<Link href="/sign-up">Sign up</Link>}
-              fontSize="sm"
-              sx={{ alignSelf: 'center' }}
-            >
-              Don&apos;t have an account?
+            <Button sx={{ mt: 1 }}>Log in</Button>
+            <div className="cardbody">
+
+            </div>
+            <Typography> 
+             Don&apos;t have an account?
+            <Link to="/signup"
+            >Sign up</Link>
+            
             </Typography>
+            </form>
+     
           </Sheet>
-          </Box>
+         
+
+          </Stack>
         </main>
       </CssVarsProvider>
       </div>
+            
     );
   }
 

@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Profile from './pages/Profile';
 import {
   ApolloClient,
   InMemoryCache,
@@ -73,7 +74,9 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
-        <Route path="/exercise/:bodyPart" element={<ExerciseDetail />} />
+
+        <Route path="/exercise" element={<ExerciseDetail />} />
+        <Route path='/profile' element={<Profile />} />
       </Routes>
     </Box>
     </ApolloProvider>
