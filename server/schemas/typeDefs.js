@@ -15,6 +15,7 @@ type User {
   type Query {
     users: [User]
     user(username: String!): User
+    me: Profile
     profile(username: String): [Profile]
   }
 
@@ -25,6 +26,8 @@ type Profile {
   }
 
   type Mutation {
+    addUser(username: String!, email: String!, password: String!): Auth
+    login(email: String!, password: String!): Auth
     addProfile(name: String!): Profile
     removeProfile(profileId: ID!): Profile
     
