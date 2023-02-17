@@ -73,7 +73,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
-        <Route path="/exercise" element={<ExerciseDetail />} />
+        <Route path="/exercise/:bodyPart" element={<ExerciseDetail />} />
       </Routes>
     </Box>
     </ApolloProvider>
