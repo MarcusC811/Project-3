@@ -18,6 +18,10 @@ type User {
     profile(username: String): [Profile]
   }
 
+  type Query {
+    me: User
+  }
+
 type Profile {
     _id: ID
     first_name: String
