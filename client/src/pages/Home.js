@@ -5,11 +5,18 @@ import SearchExercises from "../components/SearchExercises";
 import Exercises from "../components/Exercises";
 import Shiny from "../assets/images/shinydb.png";
 import HorizontalScrollBar from "../components/HorizontalScrollBar";
+import Auth from '../utils/auth';
+import { Navigate } from 'react-router-dom';
+
 
 
 const Home = () => {
-    const [bodyPart, setBodyPart] = useState('all');
-    const [exercises, setExercises] = useState([]);
+    if (!Auth.loggedIn()) {
+        return <Navigate to="/login"  replace={true} />;
+    }
+    
+    // const [bodyPart, setBodyPart] = useState('all');
+    // const [exercises, setExercises] = useState([]);
     return (
         <Box>
             <HeroBanner/>
