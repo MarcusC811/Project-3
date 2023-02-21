@@ -13,7 +13,6 @@ const ExerciseDetail = () => {
       
       try {
         const response = await fetchWorkoutData(bodyPart);
-        console.log(response.length);
         if(response.length >= 50) {
           const randomWorkouts = getRandomWorkouts(response, 50);
           setWorkouts(randomWorkouts);
