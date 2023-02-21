@@ -12,9 +12,7 @@ const HeroBanner = () => {
     }}  position="relative" p="20px">
         <Typography color="#99D98C"
         fontWeight="400" fontSize="75px" fontFamily="Copperplate, Papyrus, fantasy"	
-        >
-            SWOLEMATE
-            
+        >SWOLEMATE
         </Typography>
         <Typography fontWeight={400} fontFamily="Arial, Helvetica, sans-serif"
         sx={{ fontSize: { lg: '44px', xs: '40px'}}}

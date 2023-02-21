@@ -8,12 +8,13 @@ import { Navigate } from "react-router-dom";
 
 
 import Auth from '../utils/auth';
+import Footer from "../components/Footer";
 
 
 const Home = () => {
     const [bodyPart, setBodyPart] = useState('all');
     const [exercises, setExercises] = useState([]);
-    
+
     if (!Auth.loggedIn()) {
         return <Navigate to="/login" replace={true}/>}
     return (
@@ -28,6 +29,7 @@ const Home = () => {
             bodyPart={bodyPart}
             setBodyPart={setBodyPart}
              /> */}
+             <Footer align='center' />
         </Box>
     )
 }
