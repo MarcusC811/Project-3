@@ -6,7 +6,7 @@ import HeroBannerImage from '../assets/images/andrea.jpg';
 
 const HeroBanner = () => {
   return (
-    <Box sx={{
+    <Box className="test" sx={{
         mt: { lg: '212px', xs: '70px'},
         ml: { sm: '50px'}
     }}  position="relative" p="20px">
