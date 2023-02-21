@@ -187,6 +187,39 @@ if (Auth.loggedIn()) {
                 onChange={handleChange}
               />
             </FormControl>
+            <FormControl>
+              <FormLabel>First Name</FormLabel>
+              <Input
+                // html input attribute
+                name="first_name"
+                type="first_name"
+                placeholder="First Name"
+                value={formState.first_name}
+                onChange={handleChange}
+              />
+            </FormControl>
+            <FormControl>
+              <FormLabel>Last Name</FormLabel>
+              <Input
+                // html input attribute
+                name="last_name"
+                type="last_name"
+                placeholder="Last Name"
+                value={formState.last_name}
+                onChange={handleChange}
+              />
+            </FormControl>
+            <FormControl>
+              <FormLabel>Bio</FormLabel>
+              <Input
+                // html input attribute
+                name="bio"
+                type="bio"
+                placeholder="Tell us about you"
+                value={formState.bio}
+                onChange={handleChange}
+              />
+            </FormControl>
   
             <Button type="submit"
             sx={{ mt: 1 /* margin top */ }}>Sign up
