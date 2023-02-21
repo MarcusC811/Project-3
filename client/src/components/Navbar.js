@@ -20,18 +20,18 @@ const Navbar = () => {
                 <img src={Logo}  alt="logo" style={{
                     width: '48px', height: '48px', margin: '0 20px'}}/>
             </Link>
-            <Stack
+            <Stack 
             direction="row"
             gap="40px"
-            fontSize="24px"
+            fontSize="20px"
             alignItems="flex-end" >
             <Link to="/" style={{ textDecoration: 'none', color: '#3A1212', 
-            borderBottom: '3px solid #99D98C'}}
+            borderBottom: '3px solid #99D98C', fontFamily: 'Arial, Helvetica, sans-serif'}}
             >Home</Link>
             <PopupState variant="popover" popupId="demo-popup-menu">
                 {(popupState) => (
                     <React.Fragment>
-                    <Button {...bindTrigger(popupState)} style={{ textDecoration: 'none', color: '#3A1212', borderBottom: '3px solid #99D98C', fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI', fontSize: "24px", padding: '0', textTransform: 'none', letterSpacing: 'none', fontWeight: 'normal', lineHeight: '1.35'}}>
+                    <Button {...bindTrigger(popupState)} style={{ textDecoration: 'none', color: '#3A1212', borderBottom: '3px solid #99D98C', fontFamily: 'Arial, Helvetica, sans-serif', fontSize: "20px", padding: '0', textTransform: 'none', letterSpacing: 'none', fontWeight: 'normal', lineHeight: '1.35'}}>
                         Exercises
                     </Button>
                     <Menu {...bindMenu(popupState)}>
@@ -46,10 +46,10 @@ const Navbar = () => {
                 )}
             </PopupState>
             <Link to="/login" style={{ textDecoration: 'none', color: '#3A1212', 
-            borderBottom: '3px solid #99D98C'}}
+            borderBottom: '3px solid #99D98C', fontFamily: 'Arial, Helvetica, sans-serif'}}
             >Login</Link>
             <Link to="/profile" style={{ textDecoration: 'none', color: '#3A1212', 
-            borderBottom: '3px solid #99D98C'}}
+            borderBottom: '3px solid #99D98C', fontFamily: 'Arial, Helvetica, sans-serif'}}
             >Profile</Link>
             <Logout/>
             </Stack>

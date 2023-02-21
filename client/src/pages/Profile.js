@@ -7,14 +7,15 @@ import { QUERY_USER, QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
 
 const Profile = () => {
-if (!Auth.loggedIn()) {
-        return <Navigate to="/login" replace={true}/>}
-        
+
   const { username: userParam } = useParams();
 
   const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
     variables: { username: userParam },
   });
+
+  if (!Auth.loggedIn()) {
+    return <Navigate to="/login" replace={true}/>}
 
   const user = data?.me || data?.user || {};
   // navigate to personal profile page if username is yours

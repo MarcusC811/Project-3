@@ -55,61 +55,6 @@ if (Auth.loggedIn()) {
     return <Navigate to="/profile" replace={true}/>}
 
   return (
-    // <main className="flex-row justify-center mb-4">
-    //   <div className="col-12 col-lg-10">
-    //     <div className="card">
-    //       <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
-    //       <div className="card-body">
-    //         {data ? (
-    //           <p>
-    //             Success! You may now head{' '}
-    //             <Link to="/">back to the homepage.</Link>
-    //           </p>
-    //         ) : (
-    //           <form onSubmit={handleFormSubmit}>
-    //             <input
-    //               className="form-input"
-    //               placeholder="Your username"
-    //               name="username"
-    //               type="text"
-    //               value={formState.name}
-    //               onChange={handleChange}
-    //             />
-    //             <input
-    //               className="form-input"
-    //               placeholder="Your email"
-    //               name="email"
-    //               type="email"
-    //               value={formState.email}
-    //               onChange={handleChange}
-    //             />
-    //             <input
-    //               className="form-input"
-    //               placeholder="******"
-    //               name="password"
-    //               type="password"
-    //               value={formState.password}
-    //               onChange={handleChange}
-    //             />
-    //             <button
-    //               className="btn btn-block btn-primary"
-    //               style={{ cursor: 'pointer' }}
-    //               type="submit"
-    //             >
-    //               Submit
-    //             </button>
-    //           </form>
-    //         )}
-
-    //         {error && (
-    //           <div className="my-3 p-3 bg-danger text-white">
-    //             {error.message}
-    //           </div>
-    //         )}
-    //       </div>
-    //     </div>
-    //   </div>
-    // </main>
 
 
     <div
@@ -119,7 +64,8 @@ if (Auth.loggedIn()) {
             <Box
             sx={{
                 backgroundImage: `url(${BackgroundImage})`,
-                height: 1000
+                height: 1000,
+                
             }}
             >
           {/* <ModeToggle /> */}
@@ -127,19 +73,20 @@ if (Auth.loggedIn()) {
             
             sx={{
               width: 300,
-              height: 300,
+              height: 450,
               mx: 'auto', // margin left & right
-              my: 4, // margin top & botom
-              py: 3, // padding top & bottom
+              my: 10, // margin top & botom
+              py: 5, // padding top & bottom
               px: 2, // padding left & right
               display: 'flex',
               justifyContent: 'center',
               flexDirection: 'column',
               gap: 2,
+              top: '70px',
               borderRadius: '22px',
-              boxShadow: 'md',
+              boxShadow: 'lg',
               backgroundColor: '#99D98C',
-              opacity: '70%'
+              opacity: '100%'
             }}
             variant="outlined"
           >
@@ -147,10 +94,10 @@ if (Auth.loggedIn()) {
                 
                     
                 
-              <Typography level="h4" component="h1">
+              <Typography fontFamily='Copperplate, Papyrus, fantasy' level="h4" component="h1" align="center">
                 <b>Welcome!</b>
               </Typography>
-              <Typography level="body2">Register with us</Typography>
+              <Typography fontFamily="Arial, Helvetica, sans-serif" align="center" level="body2">Register with us</Typography>
             </div>
             <form onSubmit={handleFormSubmit}>
             <FormControl>
@@ -182,7 +129,7 @@ if (Auth.loggedIn()) {
                 // html input attribute
                 name="password"
                 type="password"
-                placeholder="password"
+                placeholder="Password"
                 value={formState.password}
                 onChange={handleChange}
               />
@@ -220,10 +167,11 @@ if (Auth.loggedIn()) {
                 onChange={handleChange}
               />
             </FormControl>
-  
-            <Button type="submit"
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <Button type="submit" 
             sx={{ mt: 1 /* margin top */ }}>Sign up
             </Button>
+            </div>
             </form>
             {/* <Typography
               endDecorator={<Link href="/sign-up">Sign up</Link>}
