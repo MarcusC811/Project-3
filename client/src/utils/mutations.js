@@ -24,4 +24,10 @@ export const ADD_USER = gql`
   }
 `;
 
+export const LOGOUT_USER = gql`
+mutation logout($accessToken: String!) {
+  logout(accessToken: $accessToken)
+}
+`;
+
 
