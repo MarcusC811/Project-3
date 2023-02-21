@@ -36,14 +36,14 @@ const Profile = () => {
     );
   }
 
-  if (!user.bio.length) {
+  if (!user?.profile?.bio) {
     return <h3>No bio has been created yet.</h3>;
   }
 
   return (
     <div>
       <h3>{user.username}'s Profile</h3>
-          <div key={user.profile.bio._id} className="card mb-3">
+          <div key={user._id} className="card mb-3">
             <h4 className="card-header bg-primary text-light p-2 m-0">
               Hello, I'm {user.profile.first_name} & here's a little bit about me
             </h4>

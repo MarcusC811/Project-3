@@ -46,13 +46,14 @@ const Signup = () => {
       });
 
       Auth.login(data.addUser.token);
-        setFormState('')
+      setFormState('')
     } catch (e) {
       console.error(e);
     }
   };
-if (Auth.loggedIn()) {
-    return <Navigate to="/profile" replace={true}/>}
+  if (Auth.loggedIn()) {
+    return <Navigate to="/profile" replace={true} />
+  }
 
   return (
 
@@ -61,131 +62,137 @@ if (Auth.loggedIn()) {
     >
       <CssVarsProvider>
         <main>
-            <Box
+          <Box
             sx={{
-                backgroundImage: `url(${BackgroundImage})`,
-                height: 1000,
-                
+              backgroundImage: `url(${BackgroundImage})`,
+              // height: 1000,
+              minHeight: "100vh",
+              // display: 'flex',
+              // justifyContent: 'center',
+              // flexDirection: 'column',
+              my: 10,
+              py: 0
+
             }}
-            >
-          {/* <ModeToggle /> */}
-          <Sheet
-            
-            sx={{
-              width: 300,
-              height: 450,
-              mx: 'auto', // margin left & right
-              my: 10, // margin top & botom
-              py: 5, // padding top & bottom
-              px: 2, // padding left & right
-              display: 'flex',
-              justifyContent: 'center',
-              flexDirection: 'column',
-              gap: 2,
-              top: '70px',
-              borderRadius: '22px',
-              boxShadow: 'lg',
-              backgroundColor: '#99D98C',
-              opacity: '100%'
-            }}
-            variant="outlined"
           >
-            <div>
-                
-                    
-                
-              <Typography fontFamily='Copperplate, Papyrus, fantasy' level="h4" component="h1" align="center">
-                <b>Welcome!</b>
-              </Typography>
-              <Typography fontFamily="Arial, Helvetica, sans-serif" align="center" level="body2">Register with us</Typography>
-            </div>
-            <form onSubmit={handleFormSubmit}>
-            <FormControl>
-            <FormLabel>Username</FormLabel>
-              <Input
-                // html input attribute
-                name="username"
-                type="username"
-                placeholder="johndoe112"
-                value={formState.username}
-                onChange={handleChange}
-              />
-              </FormControl>
-              <FormControl>
-              <FormLabel>Email</FormLabel>
-              
-              <Input
-                // html input attribute
-                name="email"
-                type="email"
-                placeholder="johndoe@email.com"
-                value={formState.email}
-                onChange={handleChange}
-              />
-            </FormControl>
-            <FormControl>
-              <FormLabel>Password</FormLabel>
-              <Input
-                // html input attribute
-                name="password"
-                type="password"
-                placeholder="Password"
-                value={formState.password}
-                onChange={handleChange}
-              />
-            </FormControl>
-            <FormControl>
-              <FormLabel>First Name</FormLabel>
-              <Input
-                // html input attribute
-                name="first_name"
-                type="first_name"
-                placeholder="First Name"
-                value={formState.first_name}
-                onChange={handleChange}
-              />
-            </FormControl>
-            <FormControl>
-              <FormLabel>Last Name</FormLabel>
-              <Input
-                // html input attribute
-                name="last_name"
-                type="last_name"
-                placeholder="Last Name"
-                value={formState.last_name}
-                onChange={handleChange}
-              />
-            </FormControl>
-            <FormControl>
-              <FormLabel>Bio</FormLabel>
-              <Input
-                // html input attribute
-                name="bio"
-                type="bio"
-                placeholder="Tell us about you"
-                value={formState.bio}
-                onChange={handleChange}
-              />
-            </FormControl>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <Button type="submit" 
-            sx={{ mt: 1 /* margin top */ }}>Sign up
-            </Button>
-            </div>
-            </form>
-            {/* <Typography
+            {/* <ModeToggle /> */}
+            <Sheet
+
+              sx={{
+                width: 300,
+                height: 450,
+                mx: 'auto', // margin left & right
+                // my: -10, // margin top & botom
+                py: 5, // padding top & bottom
+                px: 2, // padding left & right
+                display: 'flex',
+                justifyContent: 'center',
+                flexDirection: 'column',
+                gap: 2,
+                top: '70px',
+                borderRadius: '22px',
+                boxShadow: 'lg',
+                backgroundColor: '#99D98C',
+                opacity: '100%'
+              }}
+              variant="outlined"
+            >
+              <div>
+
+
+
+                <Typography fontFamily='Copperplate, Papyrus, fantasy' level="h4" component="h1" align="center">
+                  <b>Welcome!</b>
+                </Typography>
+                <Typography fontFamily="Arial, Helvetica, sans-serif" align="center" level="body2">Register with us</Typography>
+              </div>
+              <form onSubmit={handleFormSubmit}>
+                <FormControl>
+                  <FormLabel>Username</FormLabel>
+                  <Input
+                    // html input attribute
+                    name="username"
+                    type="username"
+                    placeholder="johndoe112"
+                    value={formState.username}
+                    onChange={handleChange}
+                  />
+                </FormControl>
+                <FormControl>
+                  <FormLabel>Email</FormLabel>
+
+                  <Input
+                    // html input attribute
+                    name="email"
+                    type="email"
+                    placeholder="johndoe@email.com"
+                    value={formState.email}
+                    onChange={handleChange}
+                  />
+                </FormControl>
+                <FormControl>
+                  <FormLabel>Password</FormLabel>
+                  <Input
+                    // html input attribute
+                    name="password"
+                    type="password"
+                    placeholder="Password"
+                    value={formState.password}
+                    onChange={handleChange}
+                  />
+                </FormControl>
+                <FormControl>
+                  <FormLabel>First Name</FormLabel>
+                  <Input
+                    // html input attribute
+                    name="first_name"
+                    type="first_name"
+                    placeholder="First Name"
+                    value={formState.first_name}
+                    onChange={handleChange}
+                  />
+                </FormControl>
+                <FormControl>
+                  <FormLabel>Last Name</FormLabel>
+                  <Input
+                    // html input attribute
+                    name="last_name"
+                    type="last_name"
+                    placeholder="Last Name"
+                    value={formState.last_name}
+                    onChange={handleChange}
+                  />
+                </FormControl>
+                <FormControl>
+                  <FormLabel>Bio</FormLabel>
+                  <Input
+                    // html input attribute
+                    name="bio"
+                    type="bio"
+                    placeholder="Tell us about you"
+                    value={formState.bio}
+                    onChange={handleChange}
+                  />
+                </FormControl>
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                  <Button type="submit"
+                    sx={{ mt: 1 /* margin top */ }}>Sign up
+                  </Button>
+                </div>
+              </form>
+              {/* <Typography
               endDecorator={<Link href="/sign-up">Sign up</Link>}
               fontSize="sm"
               sx={{ alignSelf: 'center' }}
             >
               Don&apos;t have an account?
             </Typography> */}
-          </Sheet>
+            </Sheet>
           </Box>
         </main>
       </CssVarsProvider>
-      </div>
-        
+    </div>
+
   );
 };
 

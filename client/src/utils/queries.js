@@ -20,8 +20,11 @@ export const QUERY_ME = gql`
     me {
       _id
       username
-      email
-      password
+      profile {
+        first_name
+        last_name
+        bio
+      }
     }
   }
 `;

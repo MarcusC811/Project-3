@@ -6,7 +6,7 @@ type User {
     username: String
     email: String
     password: String
-    profile: [Profile]
+    profile: Profile
   }
   type Auth {
     token: ID!
@@ -16,7 +16,7 @@ type User {
   type Query {
     users: [User]
     user(username: String!): User
-    me: Profile
+    me: User
     profile(username: String): [Profile]
   }
 
@@ -24,6 +24,7 @@ type Profile {
     _id: ID
     first_name: String
     last_name: String
+    bio: String
   }
 
   type Mutation {
