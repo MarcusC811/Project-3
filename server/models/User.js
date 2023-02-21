@@ -19,12 +19,11 @@ const userSchema = new Schema({
         required: true,
         match: [/^(?=.{8,})((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/, 'Password must be minimum eight characters, have at least one uppercase letter, one lowercase letter, one number & one special character' ],
   },  
-  profile: [
+  profile:
     {
       type: Schema.Types.ObjectId,
       ref: 'Profile',
     },
-  ],
 });
 
 userSchema.pre('save', async function (next) {

@@ -12,8 +12,22 @@ const resolvers = {
 
     },
     me: async (parent, args, context) => {
+      console.log(context.user)
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate('profile');
+       return User.findOne({ _id: context.user._id }).populate('profile')
+       .then((result) => {
+        console.log(result)
+        const dummyData = {
+          _id: result._id,
+          username: result.username,
+          email: result.email,
+          profile: {
+            first_name: "Test First Name",
+            bio: "Sample bio"
+          }
+        }
+         return dummyData;
+       });
       }
       throw new AuthenticationError('You need to be logged in!');
     },
