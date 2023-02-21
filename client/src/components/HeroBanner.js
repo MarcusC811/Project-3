@@ -11,23 +11,24 @@ const HeroBanner = () => {
         ml: { sm: '50px'}
     }}  position="relative" p="20px">
         <Typography color="#99D98C"
-        fontWeight="600" fontSize="26px">
+        fontWeight="400" fontSize="75px" fontFamily="Copperplate, Papyrus, fantasy"	
+        >
             SWOLEMATE
             
         </Typography>
-        <Typography fontWeight={700}
+        <Typography fontWeight={400} fontFamily="Arial, Helvetica, sans-serif"
         sx={{ fontSize: { lg: '44px', xs: '40px'}}}
         mb="23px" mt="30px"
         >
-            Rise, Sweat <br /> and Have fun
+            Find your perfect workout <br /> 
         </Typography>
         <Typography fontSize="22px"
-        lineHeight="35px" mb={4}>
-            Exercise with a purpose
+        lineHeight="35px" color="#99D98C" fontFamily="Arial, Helvetica, sans-serif" mb={4}>
+            Easy to follow demonstrations make fitness enjoyable!
         </Typography>
        
         <Typography
-        fontWeight={600}
+        fontWeight={200}
         color="#99D98C"
         sx={{
             opacoty: 0.1,
@@ -38,7 +39,8 @@ const HeroBanner = () => {
 
         </Typography>
         <img src={HeroBannerImage} alt="banner"
-        className="hero-banner-img"/>
+        className="hero-banner-img"
+        />
     </Box>
   )
 }
