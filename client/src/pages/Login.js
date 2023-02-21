@@ -14,7 +14,6 @@ import BackgroundImage from '../assets/images/SWOLEMATE2.png';
 import { Navigate } from 'react-router-dom';
 
 
-
 import Auth from '../utils/auth';
 
 const Login = (props) => {
