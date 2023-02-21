@@ -6,6 +6,7 @@ type User {
     username: String
     email: String
     password: String
+    profile: [Profile]
   }
   type Auth {
     token: ID!

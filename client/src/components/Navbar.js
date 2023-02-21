@@ -8,6 +8,7 @@ import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
 
 import Logo from '../assets/images/dumbbell.png';
 import { borderBottom } from '@mui/system';
+import webFont from 'webfontloader';
 
 const Navbar = () => {
     return (
