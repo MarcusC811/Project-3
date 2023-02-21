@@ -1,5 +1,3 @@
-
-
 # Swolemate
 
 ![Project Screenshot](/client/src/assets/icons/dumbbell.png)
