@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
-
+import Logout from '../components/Logout';
 import Logo from '../assets/images/dumbbell.png';
 import { borderBottom } from '@mui/system';
 import webFont from 'webfontloader';
@@ -51,7 +51,7 @@ const Navbar = () => {
             <Link to="/profile" style={{ textDecoration: 'none', color: '#3A1212', 
             borderBottom: '3px solid #99D98C'}}
             >Profile</Link>
-                
+            <Logout/>
             </Stack>
         </Stack>
     )

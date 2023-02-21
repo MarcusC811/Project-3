@@ -54,7 +54,7 @@ const Login = (props) => {
     // });
   };
   if (Auth.loggedIn()) {
-    return <Navigate to="/home"  replace={true} />;
+    return <Navigate to="/"  replace={true} />;
   }
   
 
@@ -176,12 +176,12 @@ const Login = (props) => {
             </FormControl>
 
   
-            <Button sx={{ mt: 1 }}>Log in</Button>
+            <Button onClick={handleFormSubmit} sx={{ mt: 1 }}>Log in</Button>
             <div className="cardbody">
 
             </div>
             <Typography> 
-             Don&apos;t have an account?
+             Don't have an account?
             <Link to="/signup"
             >Sign up</Link>
             
