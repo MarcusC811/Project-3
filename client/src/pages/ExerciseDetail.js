@@ -1,11 +1,17 @@
 import { fetchWorkoutData, getRandomWorkouts } from '../utils/fetchData';
 import ExerciseCard from '../components/ExerciseCard';
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
+import { Navigate } from "react-router-dom";
+
+import Auth from '../utils/auth';
 
 const ExerciseDetail = () => {
   const [workouts, setWorkouts] = useState([]);
   const { bodyPart } = useParams();
+
+  if (!Auth.loggedIn()) {
+    return <Navigate to="/login" replace={true}/>}
 
   useEffect(() => {
     const fetchData = async () => {
