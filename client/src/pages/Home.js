@@ -16,20 +16,25 @@ const Home = () => {
     const [exercises, setExercises] = useState([]);
 
     if (!Auth.loggedIn()) {
-        return <Navigate to="/" replace={true}/>}
+        return (
+            <Box>
+                <HeroBanner />
+                <div style={{ display: "none" }}>
+                    {/* Your content here */}
+                </div>
+                <Footer align='center' />
+            </Box>
+        );
+    }
+
+    // User is authorized, show the div
     return (
         <Box>
-            <HeroBanner/>
-            {/* <SearchExercises setExercises={setExercises}
-            bodyPart={bodyPart}
-            setBodyPart={setBodyPart}
-            />
-            <Exercises 
-            setExercises={setExercises}
-            bodyPart={bodyPart}
-            setBodyPart={setBodyPart}
-             /> */}
-             <Footer align='center' />
+            <HeroBanner />
+            <div>
+                {/* Your content here */}
+            </div>
+            <Footer align='center' />
         </Box>
     )
 }
