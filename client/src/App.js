@@ -5,12 +5,14 @@ import React from 'react';
 import { Box } from '@mui/material';
 
 import './App.css';
+import './access.css';
 import ExerciseDetail from './pages/ExerciseDetail';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
+import Access from './pages/Access';
 import {
   ApolloClient,
   InMemoryCache,
@@ -77,6 +79,7 @@ const App = () => {
 
         <Route path="/exercise/:bodyPart" element={<ExerciseDetail />} />
         <Route path='/profile' element={<Profile />} />
+        <Route path="/access" element={<Access />}/>
       </Routes>
     </Box>
     </ApolloProvider>

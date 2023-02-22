@@ -8,13 +8,13 @@
   }
   
   h1 {
-    font-size: 8rem;
+    font-size: 6rem;
     margin-bottom: 0;
     color: #f44336;
   }
   
   h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: 0;
     margin-bottom: 1rem;
   }
@@ -24,7 +24,7 @@
     margin-bottom: 2rem;
   }
   
-  button {
+  .accessBtn {
     background-color: #1427d4;
     color: white;
     padding: 1rem 2rem;
@@ -35,7 +35,7 @@
     transition: all 0.2s ease-in-out;
   }
   
-  button:hover {
+  .accessBtn:hover {
     background-color: white;
     color: #0b156e;
   }
