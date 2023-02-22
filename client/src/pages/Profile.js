@@ -37,19 +37,11 @@ const Profile = () => {
     );
   }
 
-  if (!user?.profile?.bio) {
-    return <h3 align="center" className="noBio" >No bio has been created yet.</h3>;
-  }
-
   return (
     <div>
-      <h3 align="center" className="profileHeader" >{user.username}'s Profile</h3>
+      <h3 align="center" className="profileHeader" >{user.username}'s Workout Plan</h3>
           <div key={user._id} className="card mb-3" align="center">
-            <h4 className="card-header bg-primary text-light p-2 m-0" align="center">
-              Hello, I'm {user.profile.first_name} & here's a little bit about me
-            </h4>
-            <div className="card-body bg-light p-2" align="center">
-              <p>{user.profile.bio}</p>
+          <div className="card-body bg-light p-2" align="center">
               <div><ProfilePage/></div>
             </div>
           </div>

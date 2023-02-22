@@ -6,6 +6,7 @@ import { Box } from '@mui/material';
 
 import './App.css';
 import './access.css';
+import './profileContent.css';
 import ExerciseDetail from './pages/ExerciseDetail';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
