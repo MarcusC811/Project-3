@@ -49,40 +49,55 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
+function FirstLetterCap (arr) {
+  const string = arr;
+  const splitString = string.split(" ");
+
+  for (var i = 0; i < splitString.length; i++) {
+    splitString[i] = splitString[i].charAt(0).toUpperCase() + splitString[i].slice(1);
+  }
+
+  const newString = splitString.join(" ");
+  return newString
+}
+
 export default function ExerciseCard({exercise}) {
+  const newTitle = FirstLetterCap(exercise.name);
+  const newBodyPart = FirstLetterCap(exercise.bodyPart);
+  const newMuscle = FirstLetterCap(exercise.target);
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
-          </Avatar>
-        }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title={exercise.name}
+    <Card sx={{ width: 450 }}>
+      <CardHeader sx={{textAlign: 'center'}}
+        // avatar={
+        //   <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+        //     R
+        //   </Avatar>
+        // }
+        // action={
+        //   <IconButton aria-label="settings">
+        //     <MoreVertIcon />
+        //   </IconButton>
+        // }
+        title={newTitle}
       />
       <CardMedia
         component="img"
-        height="194"
+        height="400"
         image={exercise.gifUrl}
         alt="Paella dish"
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          target: {exercise.target}
-          bodyPart: {exercise.bodyPart}
+          Target Body Part: {newBodyPart}{<br/>}
+          Target Muscle: {newMuscle}
         </Typography>
       </CardContent>
-      <CardActions disableSpacing>
+      {/* <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
         </IconButton>
-      </CardActions>
+      </CardActions> */}
     </Card>
   );
 }
