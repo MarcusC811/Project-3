@@ -1,0 +1,41 @@
+.access {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+  }
+  
+  h1 {
+    font-size: 8rem;
+    margin-bottom: 0;
+    color: #f44336;
+  }
+  
+  h2 {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  button {
+    background-color: #1427d4;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: white;
+    color: #0b156e;
+  }
