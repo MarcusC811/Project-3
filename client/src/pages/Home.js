@@ -17,6 +17,7 @@ const Home = () => {
 
     if (!Auth.loggedIn()) {
         return (
+            <div className="whitespace">
             <Box>
                 <HeroBanner />
                 <div style={{ display: "none" }}>
@@ -24,11 +25,13 @@ const Home = () => {
                 </div>
                 <Footer align='center' />
             </Box>
+            </div>
         );
     }
 
     // User is authorized, show the div
     return (
+        <div className="whitespace">
         <Box>
             <HeroBanner />
             <div>
@@ -36,6 +39,7 @@ const Home = () => {
             </div>
             <Footer align='center' />
         </Box>
+        </div>
     )
 }
 
