@@ -10,12 +10,12 @@ const ExerciseDetail = () => {
   const [workouts, setWorkouts] = useState([]);
   const { bodyPart } = useParams();
 
-  if (!Auth.loggedIn()) {
-    return <Navigate to="/login" replace={true}/>}
-
   useEffect(() => {
     const fetchData = async () => {
       setWorkouts([]);
+
+      if (!Auth.loggedIn()) {
+        return <Navigate to="/login" replace={true}/>}
       
       try {
         const response = await fetchWorkoutData(bodyPart);
