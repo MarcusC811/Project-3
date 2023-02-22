@@ -50,21 +50,31 @@ const ExpandMore = styled((props) => {
 }));
 
 export default function ExerciseCard({exercise}) {
+  const string = exercise.name;
+  const splitString = string.split(" ");
+
+  for (var i = 0; i < splitString.length; i++) {
+    splitString[i] = splitString[i].charAt(0).toUpperCase() + splitString[i].slice(1);
+  }
+
+//Join all the elements of the array back into a string 
+//using a blankspace as a separator 
+const newString = splitString.join(" ");
 
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
-          </Avatar>
-        }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title={exercise.name}
+        // avatar={
+        //   <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+        //     R
+        //   </Avatar>
+        // }
+        // action={
+        //   <IconButton aria-label="settings">
+        //     <MoreVertIcon />
+        //   </IconButton>
+        // }
+        title={newString}
       />
       <CardMedia
         component="img"
@@ -74,15 +84,15 @@ export default function ExerciseCard({exercise}) {
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          target: {exercise.target}
-          bodyPart: {exercise.bodyPart}
+          Target Body Part: {exercise.bodyPart}{<br/>}
+          Target Muscle: {exercise.target}
         </Typography>
       </CardContent>
-      <CardActions disableSpacing>
+      {/* <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
         </IconButton>
-      </CardActions>
+      </CardActions> */}
     </Card>
   );
 }

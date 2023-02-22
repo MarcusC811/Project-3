@@ -7,15 +7,15 @@ import { QUERY_USER, QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
 
 const Profile = () => {
-if (!Auth.loggedIn()) {
-      <Navigate to="/login" replace={true}/>
-  }
-        
+
   const { username: userParam } = useParams();
 
   const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
     variables: { username: userParam },
   });
+
+  if (!Auth.loggedIn()) {
+    return <Navigate to="/login" replace={true}/>}
 
   const user = data?.me || data?.user || {};
   // navigate to personal profile page if username is yours
@@ -36,14 +36,14 @@ if (!Auth.loggedIn()) {
     );
   }
 
-  if (!user.bio.length) {
+  if (!user?.profile?.bio) {
     return <h3>No bio has been created yet.</h3>;
   }
 
   return (
     <div>
       <h3>{user.username}'s Profile</h3>
-          <div key={user.profile.bio._id} className="card mb-3">
+          <div key={user._id} className="card mb-3">
             <h4 className="card-header bg-primary text-light p-2 m-0">
               Hello, I'm {user.profile.first_name} & here's a little bit about me
             </h4>

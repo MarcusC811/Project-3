@@ -118,7 +118,8 @@ const Login = (props) => {
             <Stack
             sx={{
                 backgroundImage: `url(${BackgroundImage})`,
-                height: 1000
+                height: 1000,
+                mt: 10
             }}
             >
           {/* <ModeToggle /> */}
@@ -129,7 +130,7 @@ const Login = (props) => {
               height: 300,
               mx: 'auto', // margin left & right
               mt: 20,
-              py: 3, // padding top & bottom
+              py: 5, // padding top & bottom
               px: 2, // padding left & right
               display: 'flex',
               justifyContent: 'center',
@@ -145,10 +146,10 @@ const Login = (props) => {
          
             <div>
                 
-              <Typography level="h4" component="h1">
+              <Typography level="h4" component="h1" align="center" fontFamily="Copperplate, Papyrus, fantasy">
                 <b>Welcome!</b>
               </Typography>
-              <Typography level="body2">Sign in to continue.</Typography>
+              <Typography level="body2" align="center" fontFamily="Arial, Helvetica, sans-serif">Sign in to continue.</Typography>
             </div>
             <form onSubmit={handleFormSubmit}>
             <FormControl>
@@ -164,25 +165,27 @@ const Login = (props) => {
             </FormControl>
             <FormControl onSubmit={handleFormSubmit}>
               <FormLabel>Password</FormLabel>
-              <Input
+              <Input 
                 // html input attribute
                 name="password"
                 type="password"
-                placeholder="password"
+                placeholder="Password"
                 value={formState.password}
                 onChange={handleChange}
               />
             </FormControl>
 
-  
-            <Button onClick={handleFormSubmit} sx={{ mt: 1 }}>Log in</Button>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <Button onClick={handleFormSubmit} sx={{ mt: 1}}>Log in</Button>
+            </div>
             <div className="cardbody">
 
             </div>
-            <Typography> 
-             Don't have an account?
+            <br></br>
+            <Typography align="center" fontFamily="Arial, Helvetica, sans-serif"> 
+             Don't have an account? 
             <Link to="/signup"
-            >Sign up</Link>
+            > <br></br>Click here to sign up</Link>
             
             </Typography>
             </form>
