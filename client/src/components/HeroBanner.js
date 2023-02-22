@@ -6,6 +6,7 @@ import HeroBannerImage from '../assets/images/andrea.jpg';
 
 const HeroBanner = () => {
   return (
+    <div className="whitespace">
     <Box className="test" sx={{
         mt: { lg: '212px', xs: '70px'},
         ml: { sm: '50px'}
@@ -40,6 +41,7 @@ const HeroBanner = () => {
         className="hero-banner-img"
         />
     </Box>
+    </div>
   )
 }
 
