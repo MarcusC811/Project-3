@@ -1,27 +1,37 @@
 import React, { useState } from 'react';
 
+
 function ProfilePage() {
   const [exercises, setExercises] = useState([]);
-  const [completedExercises, setCompletedExercises] = useState([]);
+  const [selectedExercise, setSelectedExercise] = useState('');
+  const [selectedDay, setSelectedDay] = useState('');
+  const [weeklyCalendar, setWeeklyCalendar] = useState([
+    { day: 'Sunday', exercises: [] },
+    { day: 'Monday', exercises: [] },
+    { day: 'Tuesday', exercises: [] },
+    { day: 'Wednesday', exercises: [] },
+    { day: 'Thursday', exercises: [] },
+    { day: 'Friday', exercises: [] },
+    { day: 'Saturday', exercises: [] },
+  ]);
 
   const handleAddExercise = (e) => {
     e.preventDefault();
-    const exerciseInput = e.target.elements.exercise.value.trim();
-    if (exerciseInput) {
-      setExercises((prevExercises) => [...prevExercises, exerciseInput]);
-      e.target.elements.exercise.value = '';
+    if (selectedExercise && selectedDay) {
+      const updatedWeeklyCalendar = weeklyCalendar.map((day) => {
+        if (day.day === selectedDay) {
+          return {
+            ...day,
+            exercises: [...day.exercises, selectedExercise],
+          };
+        } else {
+          return day;
+        }
+      });
+      setWeeklyCalendar(updatedWeeklyCalendar);
+      setExercises((prevExercises) => [...prevExercises, selectedExercise]);
+      setSelectedExercise('');
     }
-  };
-
-  const handleCompleteExercise = (index) => {
-    setCompletedExercises((prevCompletedExercises) => [
-      ...prevCompletedExercises,
-      exercises[index],
-    ]);
-    setExercises((prevExercises) => [
-      ...prevExercises.slice(0, index),
-      ...prevExercises.slice(index + 1),
-    ]);
   };
 
   const handleDeleteExercise = (index) => {
@@ -31,33 +41,53 @@ function ProfilePage() {
     ]);
   };
 
+  const exerciseOptions = [
+    'Legs',
+    'Arms',
+    'Abs',
+    'Back',
+    'Full Body',
+    'Cardio',
+    'Rest',
+  ];
+
   return (
-    <div>
-      <h1>My Exercises</h1>
-      <form onSubmit={handleAddExercise}>
-        <input type="text" name="exercise" />
-        <button type="submit">Add</button>
+    <div className='profileContent'>
+      {weeklyCalendar.map((day, index) => (
+        <div key={index}>
+          <h3>{day.day}</h3>
+          <ul>
+            {day.exercises.map((exercise, index) => (
+              <li key={index}>{exercise}</li>
+            ))}
+          </ul>
+          <button onClick={() => setSelectedDay(day.day)}>Select this day to add exercise(s)</button>
+        </div>
+      ))}
+      <form className='exerciseSelection' onSubmit={handleAddExercise}>
+        <select
+          value={selectedExercise}
+          onChange={(e) => setSelectedExercise(e.target.value)}
+        >
+          <option value=''>Select an exercise</option>
+          {exerciseOptions.map((exercise, index) => (
+            <option key={index} value={exercise}>
+              {exercise}
+            </option>
+          ))}
+        </select>
+        <button type='submit'>Add</button>
       </form>
-      <h2>Current Exercises</h2>
       <ul>
         {exercises.map((exercise, index) => (
-          <li key={index}>
-            {exercise}
-            <button onClick={() => handleCompleteExercise(index)}>
-              Completed
-            </button>
+          <div className='addedExercise' key={index}>
             <button onClick={() => handleDeleteExercise(index)}>Delete</button>
-          </li>
-        ))}
-      </ul>
-      <h2>Completed Exercises</h2>
-      <ul>
-        {completedExercises.map((exercise, index) => (
-          <li key={index}>{exercise}</li>
+          </div>
         ))}
       </ul>
     </div>
   );
-}
+};
+
 
 export default ProfilePage

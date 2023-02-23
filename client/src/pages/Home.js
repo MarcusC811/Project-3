@@ -9,6 +9,7 @@ import { Navigate } from "react-router-dom";
 
 import Auth from '../utils/auth';
 import Footer from "../components/Footer";
+import RestDays from "../components/RestDays";
 
 
 const Home = () => {
@@ -20,8 +21,9 @@ const Home = () => {
             <div className="whitespace">
             <Box>
                 <HeroBanner />
+                <br></br>
                 <div style={{ display: "none" }}>
-                    {/* Your content here */}
+                {<RestDays />}
                 </div>
                 <Footer align='center' />
             </Box>
@@ -35,7 +37,7 @@ const Home = () => {
         <Box>
             <HeroBanner />
             <div>
-                {/* Your content here */}
+                {<RestDays />}
             </div>
             <Footer align='center' />
         </Box>

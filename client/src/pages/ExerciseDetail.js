@@ -2,13 +2,15 @@ import { fetchWorkoutData, getRandomWorkouts } from '../utils/fetchData';
 import ExerciseCard from '../components/ExerciseCard';
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+
 import Grid from '@mui/material/Grid'; // Grid version 1
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 
 // import { Navigate } from "react-router-dom";
 
-// import Auth from '../utils/auth';
+
+import Auth from '../utils/auth';
 
 const ExerciseDetail = () => {
   const [workouts, setWorkouts] = useState([]);
@@ -30,12 +32,9 @@ const ExerciseDetail = () => {
     const fetchData = async () => {
       setWorkouts([]);
 
-      // if (!Auth.loggedIn()) {
-      //   return <Navigate to="/login" replace={true}/>}
-      
       try {
         const response = await fetchWorkoutData(bodyPart);
-        if(response.length >= 50) {
+        if (response.length >= 50) {
           const randomWorkouts = getRandomWorkouts(response, 50);
           setWorkouts(randomWorkouts);
         } else {
@@ -44,11 +43,14 @@ const ExerciseDetail = () => {
       } catch (err) {
         console.error(err);
       }
-    };    
+    };
 
     fetchData();
   }, [bodyPart]);
 
+  if (!Auth.loggedIn()) {
+    return <Navigate to="/access" replace={true} />
+  }
   return (
     <div className='cardContainer'>
       <h1 className='exerciseTitle'>{FirstLetterCap(bodyPart)}</h1>

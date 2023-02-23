@@ -163,17 +163,7 @@ const Signup = () => {
                     onChange={handleChange}
                   />
                 </FormControl>
-                <FormControl>
-                  <FormLabel>Bio</FormLabel>
-                  <Input
-                    // html input attribute
-                    name="bio"
-                    type="bio"
-                    placeholder="Tell us about you"
-                    value={formState.bio}
-                    onChange={handleChange}
-                  />
-                </FormControl>
+            
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                   <Button type="submit"
                     sx={{ mt: 1 /* margin top */ }}>Sign up
