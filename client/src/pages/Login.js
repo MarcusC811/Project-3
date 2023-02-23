@@ -53,7 +53,7 @@ const Login = (props) => {
     // });
   };
   if (Auth.loggedIn()) {
-    return <Navigate to="/"  replace={true} />;
+    return <Navigate to="/profile"  replace={true} />;
   }
   
 
