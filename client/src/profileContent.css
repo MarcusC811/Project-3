@@ -1,73 +1,104 @@
 .profileContent {
-    display: flex;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.profileContent > div {
+  flex-basis: calc(100% / 9);
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100px;
+  height: 100px;
+}
+
+.profileContent > div:nth-child(n+1):nth-child(-n+9) {
+  background-color: #99D98C;
+  font-weight: bold;
+  border: solid;
   
-  .profileContent > div {
-    flex-basis: calc(100% / 7);
-    padding: 10px;
-  }
-  
-  .profileContent h3 {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-  }
-  
-  .profileContent ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  
-  .profileContent ul li {
-    margin-bottom: 5px;
-  }
-  
-  .profileContent form {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-  }
-  
-  .profileContent select {
-    margin-right: 10px;
-  }
-  
-  .profileContent button[type='submit'] {
-    padding: 5px 10px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .profileContent button[type='submit']:hover {
-    background-color: #3e8e41;
-  }
-  
-  .profileContent h2 {
-    margin-top: 20px;
-    font-size: 1.5rem;
-  }
-  
-  .profileContent .addedExercise {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5px;
-  }
-  
-  .profileContent .addedExercise button {
-    background-color: #f44336;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 5px 10px;
-  }
-  
-  .profileContent .addedExercise button:hover {
-    background-color: #d32f2f;
-  }
-  
+}
+
+.profileContent h3 {
+  font-size: 1.5rem;
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+
+.profileContent p {
+  align-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.profileContent ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.profileContent ul li {
+  margin-bottom: 5px;
+}
+
+.profileContent form {
+  display: block;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.profileContent select {
+  margin-right: 10px;
+}
+
+.profileContent button[type='submit'] {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profileContent button[type='submit']:hover {
+  background-color: #3e8e41;
+}
+
+.profileContent h2 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+.profileContent .addedExercise {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.profileContent .addedExercise button {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.profileContent .addedExercise button:hover {
+  background-color: #d32f2f;
+}
+
+.calendarHeader {
+  margin-top: 70px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  color: #0540ad;
+
+}
+
+.exerciseSelection {
+  display: block;
+  flex-direction: column;
+}
