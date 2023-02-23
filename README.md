@@ -1,6 +1,6 @@
 # SWOLEMATE
 
-![Project Screenshot](/client/src/assets/icons/dumbbell.png)
+![Project Screenshot](/client/src/assets/images/SWOLEMATE2.png)
 
   ## Table of Contents
   * [Description](#description)
