@@ -70,3 +70,35 @@
 }
 
 
+.whitespace {
+  margin-top: 0px;
+}
+.noLogIn {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 32px;
+}
+
+.noBio {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 32px;
+}
+
+.profileHeader {
+  margin-top: 70px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  color: #99D98C;
+
+}
+
+
+.cardContainer{
+  margin-top: 30px;
+}
+
+.exerciseTitle{
+  text-align: center;
+  text-decoration: underline;
+  color: #99D98C;
+}

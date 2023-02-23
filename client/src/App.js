@@ -80,6 +80,7 @@ const App = () => {
         <Route path='/signup' element={<Signup />} />
 
         <Route path="/exercise/:bodyPart" element={<ExerciseDetail />} />
+
         <Route path='/profile' element={<Profile />} />
         <Route path="/access" element={<Access />}/>
       </Routes>
