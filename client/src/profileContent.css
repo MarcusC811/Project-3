@@ -1,15 +1,17 @@
 .profileContent {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
+  padding: 50px;
 }
 
 .profileContent > div {
   flex-basis: calc(100% / 9);
   padding: 10px;
+  margin-right: 5px;
   border: 1px solid #ccc;
-  width: 100px;
-  height: 100px;
+  width: 75%;
+  height: 30vh;
 }
 
 .profileContent > div:nth-child(n+1):nth-child(-n+9) {
@@ -99,6 +101,6 @@
 }
 
 .exerciseSelection {
-  display: block;
+  display: flex;
   flex-direction: column;
 }
