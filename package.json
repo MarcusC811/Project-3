@@ -18,5 +18,9 @@
     "dependencies": {
         "moment": "^2.29.4",
         "react-big-calendar": "^1.6.8"
+    },
+    
+    "engines": {
+        "node": ">=16.0.0 <17.0.0"
     }
 }
