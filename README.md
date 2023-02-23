@@ -1,8 +1,6 @@
-# SWOLEMATE
+![Project Screenshot](/client/src/assets/images/IntroImage.PNG)
 
-![Project Screenshot](/client/src/assets/images/SWOLEMATE2.png)
-
-  ## Table of Contents
+# Table of Contents
   * [Description](#description)
   * [Installation](#installation)
   * [Built With](#builtwith)
@@ -27,7 +25,7 @@ SWOLEMATE is a web application that brings new innovations in the world of fitne
 
 ![Project Screenshot](/client/src/assets/images/andrea.jpg)
 
-## Built With
+# Built With
 - Visual Studio Code
 - Node
 - Express
@@ -36,7 +34,7 @@ SWOLEMATE is a web application that brings new innovations in the world of fitne
 - GraphQL
 - Apollo
 
-## Resources
+# Resources
 - [Node.js Site](https://nodejs.org/en/ "Node.js")
 - [Express.js](https://www.npmjs.com/package/express "Express.js")
 - [Mongoose](https://www.npmjs.com/package/mongoose) 
@@ -51,16 +49,16 @@ If you have any feedback, questions, or would like to contribute to our applicat
 
 Lisa Erickson
  * Email: erickson.l.lisa@gmail.com
- * Github [lisaericksoncoding](https://github.com/lisaericksoncoding)
+ * Github: [lisaericksoncoding](https://github.com/lisaericksoncoding)
 
 Marcus Carlough
  * Email: marcus.carlough@gmail.com
- * Github [marcusC811](https://github.com/MarcusC811)
+ * Github: [marcusC811](https://github.com/MarcusC811)
 
 Nasir Abdulkadir
  * Email: TBD
- * Github [nasiromar321](https://github.com/nasiromar)
+ * Github: [nasiromar321](https://github.com/nasiromar)
 
 Kyle Nguyen
  * Email: q_nguyen91@yahoo.com
- * Github [coffeeprynce](https://github.com/coffeeprynce)
+ * Github: [coffeeprynce](https://github.com/coffeeprynce)
