@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid'; // Grid version 1
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 
-// import { Navigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 
 import Auth from '../utils/auth';
