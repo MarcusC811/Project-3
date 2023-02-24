@@ -1,0 +1,73 @@
+[
+    {
+      "username": "Beartiger123",
+      "email": "bkernighan@techfriends.dev",
+      "password": "!passWord01",
+      "first_name": "Ben",
+      "last_name": "Kernighan"
+    },
+    {
+      "username": "MKAthegt",
+      "email": "mkanatalexander@techfriends.dev",
+      "password": "!passWord02",
+      "first_name": "MK",
+      "last_name": "Alexander"
+    },
+    {
+      "username": "WestonTLSmith",
+      "email": "wtls@techfriends.dev",
+      "password": "!passWord03",
+      "first_name": "Weston",
+      "last_name": "Smith"
+    },
+    {
+      "username": "KentBeck453",
+      "email": "kbeck@techfriends.dev",
+      "password": "!passWord04",
+      "first_name": "Kent",
+      "last_name": "Beck"
+    },
+    {
+      "username": "BerDaBomb8844",
+      "email": "evberard@techfriends.dev",
+      "password": "!passWord05",
+      "first_name": "Evan",
+      "last_name": "Berard"
+    },
+    {
+      "username": "AwesomeAlan93",
+      "email": "akay@techfriends.dev",
+      "password": "!passWord06",
+      "first_name": "Alan",
+      "last_name": "Akay"
+    },
+    {
+      "username": "CARvroooom",
+      "email": "choare@techfriends.dev",
+      "password": "!passWord07",
+      "first_name": "Cho",
+      "last_name": "A. Ren"
+    },
+    {
+      "username": "NotTheWendysGuy",
+      "email": "dthomas@techfriends.dev",
+      "password": "!passWord08",
+      "first_name": "Dave",
+      "last_name": "Thomas"
+    },
+    {
+      "username": "DonDon2322",
+      "email": "dknuth@techfriends.dev",
+      "password": "!passWord09",
+      "first_name": "Don",
+      "last_name": "Knuth"
+    },
+    {
+      "username": "Lernantino",
+      "email": "lernantino@techfriends.dev",
+      "password": "!passWord10",
+      "first_name": "JJ",
+      "last_name": "Lernantino"
+    }
+  ]
+  
